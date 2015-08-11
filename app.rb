@@ -7,3 +7,10 @@ get("/") do
   @places = Places.all()
   erb(:index)
 end
+
+post("/places") do
+  destination = params.fetch("destination")
+  place = Places.new(destination)
+  place.save()
+  erb(:success)
+end

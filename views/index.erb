@@ -3,7 +3,7 @@
 <p>Here is everywhere you have been:</p>
 
 <ul>
-  <% @places.each() do |place|>
+  <% @places.each() do |place|%>
     <li><%= place.destination() %></li>
     <% end %>
 </ul>
@@ -14,4 +14,4 @@
   <label for="destination">Location</label>
   <input id="destination" name="destination" type="text" placeholder="Location here">
   <button type="submit">Add Location</button>
-</form>  
+</form>
