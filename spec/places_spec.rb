@@ -2,9 +2,9 @@ require('rspec')
 require('places')
 
 describe(Places) do
-  # before() do
-  #   Places.clear()
-  # end
+  before() do
+    Places.clear()
+  end
 
   describe("#destination") do
     it("lets you give a destination") do
