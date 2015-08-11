@@ -19,5 +19,13 @@ describe(Places) do
     end
   end
 
+  describe("#save") do
+    it("adds a task to the array of saved tasks") do
+      test_task = Places.new("McMinnville")
+      test_task.save()
+      expect(Places.all()).to(eq([test_task]))
+    end  
+  end
+
 
 end
