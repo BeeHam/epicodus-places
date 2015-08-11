@@ -24,7 +24,15 @@ describe(Places) do
       test_task = Places.new("McMinnville")
       test_task.save()
       expect(Places.all()).to(eq([test_task]))
-    end  
+    end
+  end
+
+  describe(".clear") do
+    it("empties out all of the saved destinations") do
+      Places.new("Beavertron").save()
+      Places.clear()
+      expect(Places.all()).to(eq([]))
+    end
   end
 
 
