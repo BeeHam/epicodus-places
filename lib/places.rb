@@ -8,4 +8,10 @@ class Places
   define_method(:destination) do
     @destination
   end
+
+  define_singleton_method(:all) do
+    @@all_places
+  end
+
+
 end
