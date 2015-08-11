@@ -15,3 +15,12 @@ describe('path for creating and adding to a destination list') do
     expect(page).to have_content("You have successfully added to your destination list!")
   end
 end
+
+describe('path for returning to /places and viewing list') do
+  it('returns user to list') do
+    visit('/places')
+save_and_open_page
+    click_link('Get Back!')
+    expect(page).to have_content('Places I Have Been')
+  end
+end
